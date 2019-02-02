@@ -6,6 +6,8 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Toast;
 
+import com.jaeger.library.StatusBarUtil;
+
 public class MainActivity extends AppCompatActivity {
     private CardView order,promo,profil;
     @Override
@@ -13,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
+        StatusBarUtil.setTranslucent(MainActivity.this, 65);
 
         order = (CardView) findViewById(R.id.fooddrink);
         promo = (CardView) findViewById(R.id.promo);
